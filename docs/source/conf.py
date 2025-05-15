@@ -24,19 +24,32 @@ author = 'D. Santiago'
 # The full version, including alpha/beta/rc tags
 release = '2023'
 
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx_gallery.gen_gallery',
-]
+              'myst_parser',
+              'sphinx.ext.mathjax',
+              ]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
 
 sphinx_gallery_conf = {
-     'examples_dirs': "../../examples",   # path to your example scripts
-     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
+    'within_subsection_order': "FileNameSortKey",
+    'examples_dirs': "../../examples",  # path to your example scripts
+    'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
 }
+
+myst_enable_extensions = [
+    "amsmath",  # for environments like \begin{align}
+    "dollarmath"  # for $ and $$ math syntax
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -45,7 +58,6 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-
 
 # -- Options for HTML output -------------------------------------------------
 

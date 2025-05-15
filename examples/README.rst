@@ -1,4 +1,4 @@
-This is my gallery
-==================
+Advent Gallery
+==============
 
-Below is a gallery of examples
+Below is a gallery of all the charts in the calendar and their source code.
