@@ -28,7 +28,7 @@ $$m_{n}=E(X^{n})={\frac  {1}{\zeta (s)}}\sum _{{k=1}}^{\infty }{\frac  {1}{k^{{s
 
 The series on the right is just a series representation of the Riemann zeta function, but it only converges for values of $s-n$ that are greater than unity. Thus, 
 
-$$m_{n}=\left\{{\begin{matrix}\zeta (s-n)/\zeta (s)&{\textrm  {for}}~n<s-1\\\infty &{\textrm  {for}}~n\geq s-1\end{matrix}}\right.$$
+[//]: # ($$m_{n}=\left\{{\begin{matrix}\zeta &#40;s-n&#41;/\zeta &#40;s&#41;&{\textrm  {for}}~n<s-1\\\infty &{\textrm  {for}}~n\geq s-1\end{matrix}}\right.$$)
 
 The ratio of the zeta functions is well-defined, even for _n_ > _s_ − 1 because the series representation of the zeta function can be [analytically continued](https://en.wikipedia.org/wiki/Analytic_continuation). This does not change the fact that the moments are specified by the series itself, and are therefore undefined for large _n_. Therefore, the moment generating function of the zeta distribution does not exist.
 
