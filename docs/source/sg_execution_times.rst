@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:46.493** total execution time for 24 files **from all galleries**:
+**00:23.115** total execution time for 29 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,23 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_plot_advent_23_TwoPieceNormal.py` (``../../examples/plot_advent_23_TwoPieceNormal.py``)
-     - 00:46.493
+   * - :ref:`sphx_glr_auto_bonus_plot_advent_16_VonMises_Bonus.py` (``../../bonus/plot_advent_16_VonMises_Bonus.py``)
+     - 00:08.921
+     - 0.0
+   * - :ref:`sphx_glr_auto_bonus_plot_advent_19_Zeta_Bonus.py` (``../../bonus/plot_advent_19_Zeta_Bonus.py``)
+     - 00:05.374
+     - 0.0
+   * - :ref:`sphx_glr_auto_bonus_plot_advent_15_Chi_Bonus.py` (``../../bonus/plot_advent_15_Chi_Bonus.py``)
+     - 00:05.165
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_plot_advent_22_MarchenkoPastur.py` (``../../examples/plot_advent_22_MarchenkoPastur.py``)
+     - 00:02.214
+     - 0.0
+   * - :ref:`sphx_glr_auto_bonus_plot_advent_24_Normal_Bonus.py` (``../../bonus/plot_advent_24_Normal_Bonus.py``)
+     - 00:01.024
+     - 0.0
+   * - :ref:`sphx_glr_auto_bonus_plot_advent_23_TwoPieceNorma_Bonus.py` (``../../bonus/plot_advent_23_TwoPieceNorma_Bonus.py``)
+     - 00:00.417
      - 0.0
    * - :ref:`sphx_glr_auto_examples_plot_advent_01_Binomial.py` (``../../examples/plot_advent_01_Binomial.py``)
      - 00:00.000
@@ -98,7 +113,7 @@ Computation times
    * - :ref:`sphx_glr_auto_examples_plot_advent_21_InflatedBeta.py` (``../../examples/plot_advent_21_InflatedBeta.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_advent_22_MarchenkoPastur.py` (``../../examples/plot_advent_22_MarchenkoPastur.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_advent_23_TwoPieceNormal.py` (``../../examples/plot_advent_23_TwoPieceNormal.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_plot_advent_24_Normal.py` (``../../examples/plot_advent_24_Normal.py``)

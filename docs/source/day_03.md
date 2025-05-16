@@ -1,4 +1,4 @@
-## Day 3 : Cauchy Distribution
+## Day 3 : Cauchy
 
 The [Cauchy distribution](https://en.wikipedia.org/wiki/Cauchy_distribution), named after French mathematician [Augustin Cauchy](https://en.wikipedia.org/wiki/Augustin_Cauchy), and also called the Lorentzian distribution or Lorentz distribution, is a continuous distribution describing resonance behaviour. 
 

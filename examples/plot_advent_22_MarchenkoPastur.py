@@ -42,5 +42,5 @@ ax2.set_title('Cumulative Distribution Function', y=-0.18)
 fig.suptitle(title)
 gs.tight_layout(fig)
 
-fig.savefig('22_MarchenkoPastur')
+# fig.savefig('22_MarchenkoPastur')
 plt.show()

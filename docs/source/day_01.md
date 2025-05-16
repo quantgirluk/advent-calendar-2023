@@ -1,5 +1,4 @@
-
-# Day 1 : Binomial Distribution
+# Day 1 : Binomial
 
 In probability theory and [statistics](https://en.wikipedia.org/wiki/Statistics), the **Binomial distribution** with parameters _n_ and _p_ is the 
 [discrete probability distribution](https://en.wikipedia.org/wiki/Discrete_probability_distribution) of the number of successes in a sequence of _n_ [independent](https://en.wikipedia.org/wiki/Statistical_independence) experiments, each asking a [yes–no question](https://en.wikipedia.org/wiki/Yes%E2%80%93no_question), and each with its own

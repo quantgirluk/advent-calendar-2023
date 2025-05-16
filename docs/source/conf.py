@@ -20,7 +20,10 @@
 project = 'Advent Calendar'
 copyright = '2025, D. Santiago'
 author = 'D. Santiago'
+# copyright =  "2024"  # Copyright year to be placed in the footer
 
+# html_logo = 'advent.jpg'
+html_logo = 'logo.png'
 # The full version, including alpha/beta/rc tags
 release = '2023'
 
@@ -42,8 +45,8 @@ source_suffix = {
 
 sphinx_gallery_conf = {
     'within_subsection_order': "FileNameSortKey",
-    'examples_dirs': "../../examples",  # path to your example scripts
-    'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
+    'examples_dirs': ["../../examples", "../../bonus"] ,  # path to your example scripts
+    'gallery_dirs': ['auto_examples', 'auto_bonus'],  # path to where to save gallery generated output
 }
 
 myst_enable_extensions = [
@@ -66,6 +69,13 @@ exclude_patterns = []
 #
 # html_theme = 'alabaster'
 html_theme = 'sphinx_book_theme'
+# html_theme = 'press'
+
+html_theme_options = {
+    "repository_url": "https://github.com/quantgirluk/advent-calendar-2023",
+    "use_repository_button": True,
+    "use_source_button": True,
+}
 
 html_title = "Advent Calendar 2023"
 
