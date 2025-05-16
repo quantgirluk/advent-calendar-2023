@@ -5,7 +5,7 @@ fanchart~=1.0.2
 twopiece~=1.3.1
 aleatory~=1.1.1
 mpmath==1.3.0
-furo==2021.11.16
+furo
 sphinx==4.5.0
 myst-parser==4.0.1
 sphinx-gallery
