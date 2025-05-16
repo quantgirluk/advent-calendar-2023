@@ -179,3 +179,8 @@ _build
 
 .DS_Store
 .idea/
+
+# Build docs files
+docs/_build/*
+
+docs/source/auto_examples/*
