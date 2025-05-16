@@ -35,10 +35,3 @@ If you like this project, give it a star in GitHub and connect with me via:
        Thanks for visiting ✨
    </div>
 
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Advent Calendar
-
-   day_01
