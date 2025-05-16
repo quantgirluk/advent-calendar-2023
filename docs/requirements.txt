@@ -1,4 +1,4 @@
-matplotlib
+matplotlib==3.7.5
 numpy
 scipy
 fanchart~=1.0.2
