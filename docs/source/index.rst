@@ -42,34 +42,3 @@ If you like this project, give it a star in GitHub and connect with me via:
    :caption: Advent Calendar
 
    day_01
-   day_02
-   day_03
-   day_04
-   day_05
-   day_06
-   day_07
-   day_08
-   day_09
-   day_10
-   day_11
-   day_12
-   day_13
-   day_14
-   day_15
-   day_16
-   day_17
-   day_18
-   day_19
-   day_20
-   day_21
-   day_22
-   day_23
-   day_24
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Galleries and Source Code
-
-   auto_examples/index
-   auto_bonus/index
