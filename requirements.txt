@@ -6,7 +6,7 @@ twopiece~=1.3.1
 aleatory~=1.1.1
 mpmath==1.3.0
 furo
-sphinx==4.5.0
+sphinx==8.3.0
 myst-parser==4.0.1
 sphinx-gallery
 sphinx-book-theme
