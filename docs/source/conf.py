@@ -32,9 +32,10 @@ release = '2023'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_gallery.gen_gallery',
+extensions = [
               'myst_parser',
               'sphinx.ext.mathjax',
+              'sphinx_gallery.gen_gallery',
               ]
 
 source_suffix = {
