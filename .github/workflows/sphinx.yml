@@ -18,6 +18,12 @@ jobs:
     - uses: actions/checkout@v4
       with:
         persist-credentials: false
+
+    - name: Install LaTeX (for math rendering)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra dvipng
+
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
