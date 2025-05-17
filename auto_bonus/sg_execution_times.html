@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Computation times &#8212; Advent Calendar 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=fbb0a86e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'auto_bonus/sg_execution_times';</script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Advent Calendar 2023 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Advent Calendar 2023 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advent Calendar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../day_01.html">Day 1 : Binomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_02.html">Day 2 : Beta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_03.html">Day 3 : Cauchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_04.html">Day 4 : Pareto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_05.html">Day 5 : Poisson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_06.html">Day 6 : Arcsin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_07.html">Day 7 : Student’s T</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_08.html">Day 8 : Hypergeometric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_09.html">Day 9 : Gamma</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_10.html">Day 10 : Laplace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_11.html">Day 11 : F</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_12.html">Day 12 : Chi Squared</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_13.html">Day 13 : Exponential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_14.html">Day 14 : Lognormal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_15.html">Day 15 : Chi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_16.html">Day 16 : Von Mises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_17.html">Day 17 : Generalised Extreme Value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_18.html">Day 18 : Wigner Semicircle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_19.html">Day 19 : Zeta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_20.html">Day 20 : Tracy-Widom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_21.html">Day 21 : Zero-One Inflated Beta Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_22.html">Day 22 : Marchenko-Pastur Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_23.html">Day 23 : Two-Piece Normal Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../day_24.html">Day 24 : Normal Distribution</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Galleries and Source Code</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../auto_examples/index.html">Plots</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_01_Binomial.html">Day 1 : Binomial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_02_Beta.html">Day 2 : Beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_03_Cauchy.html">Day 3 : Cauchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_04_Pareto.html">Day 4 : Pareto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_05_Poisson.html">Day 5 : Poisson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_06_Arcsine.html">Day 5 : Arc-Sine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_07_Student_t.html">Day 7 : Student-t</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_08_Hypergeometric.html">Day 8 : Hypergeometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_09_Gamma.html">Day 9 : Gamma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_10_Laplace.html">Day 10 : Laplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_11_F.html">Day 11 : F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_12_ChiSquared.html">Day 12 : Chi-Squared</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_13_Exponential.html">Day 13 : Exponential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_14_Lognormal.html">Day 14 : Log-Normal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_15_Chi.html">Day 15 : Chi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_16_VonMises.html">Day 16 : Von Mises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_17_GeneralisedExtreme.html">Day 17 : Generalised-Extreme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_18_WignerSemicircle.html">Day 18 : Wigner Semicircle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_19_Zeta.html">Day 19 : Zeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_20_TracyWidom.html">Day 5 : Arc-Sine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_21_InflatedBeta.html">Day 21: Inflated Beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_22_MarchenkoPastur.html">Day 22: Marchenko-Pastur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_23_TwoPieceNormal.html">Day 23: Two-Piece Normal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto_examples/plot_advent_24_Normal.html">Day 24: Normal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Bonus Plots</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="plot_advent_15_Chi_Bonus.html">Day 15 : Chi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_advent_16_VonMises_Bonus.html">Day 16 : Von Mises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_advent_19_Zeta_Bonus.html">Day 19: Zeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_advent_23_TwoPieceNorma_Bonus.html">Day 23: Two-Piece Normal Distribution with Fanchart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_advent_24_Normal_Bonus.html">Day 24: Normal</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/quantgirluk/advent-calendar-2023" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/quantgirluk/advent-calendar-2023/blob/main/auto_bonus/sg_execution_times.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/auto_bonus/sg_execution_times.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Computation times</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="computation-times">
+<span id="sphx-glr-auto-bonus-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Link to this heading">#</a></h1>
+<p><strong>00:10.363</strong> total execution time for 5 files <strong>from auto_bonus</strong>:</p>
+<div class="docutils container">
+<style scoped>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script type="text/javascript" class="init">
+$(document).ready( function () {
+    $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+} );
+</script><div class="pst-scrollable-table-container"><table class="table table-striped sg-datatable">
+<thead>
+<tr class="row-odd"><th class="head"><p>Example</p></th>
+<th class="head"><p>Time</p></th>
+<th class="head"><p>Mem (MB)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="plot_advent_15_Chi_Bonus.html#sphx-glr-auto-bonus-plot-advent-15-chi-bonus-py"><span class="std std-ref">Day 15 : Chi</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_advent_15_Chi_Bonus.py</span></code>)</p></td>
+<td><p>00:03.900</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="plot_advent_19_Zeta_Bonus.html#sphx-glr-auto-bonus-plot-advent-19-zeta-bonus-py"><span class="std std-ref">Day 19: Zeta</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_advent_19_Zeta_Bonus.py</span></code>)</p></td>
+<td><p>00:02.249</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="plot_advent_16_VonMises_Bonus.html#sphx-glr-auto-bonus-plot-advent-16-vonmises-bonus-py"><span class="std std-ref">Day 16 : Von Mises</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_advent_16_VonMises_Bonus.py</span></code>)</p></td>
+<td><p>00:02.236</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="plot_advent_24_Normal_Bonus.html#sphx-glr-auto-bonus-plot-advent-24-normal-bonus-py"><span class="std std-ref">Day 24: Normal</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_advent_24_Normal_Bonus.py</span></code>)</p></td>
+<td><p>00:01.633</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="plot_advent_23_TwoPieceNorma_Bonus.html#sphx-glr-auto-bonus-plot-advent-23-twopiecenorma-bonus-py"><span class="std std-ref">Day 23: Two-Piece Normal Distribution with Fanchart</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_advent_23_TwoPieceNorma_Bonus.py</span></code>)</p></td>
+<td><p>00:00.345</p></td>
+<td><p>0.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By D. Santiago
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, D. Santiago.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
