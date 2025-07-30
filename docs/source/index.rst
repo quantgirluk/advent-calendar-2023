@@ -3,39 +3,41 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Advent Calendar of Distributions
-================================
+Calendar of Distributions
+=========================
 
-In 2023, I used the countdown to Christmas 🎄 to explore the re-visit the world of `probability distributions <https://en.wikipedia.org/wiki/Probability_distribution>`_.
-Each day, we unwrapped a different distribution --exploring its shape, story, and where it appears in the real world.
+   It is remarkable that a science which began with the consideration of games of chance should have become the most important object of human knowledge.
 
-
-From the familiar bell curve of the normal distribution to the quirky surprises of the Poisson or Cauchy,
-these mathematical gems help us make sense of randomness, uncertainty, and data.
-
-Whether you're a statistics enthusiast, a data scientist, or just curious about the patterns behind chance,
-this calendar will guide you through the rich tapestry of distributions that underpin science, finance, technology, and more.
-So, get cozy, open today’s door, and let’s discover the hidden beauty of probability—one distribution at a time!
+   — Pierre Simon Laplace, Théorie Analytique des Probabilités, 1812
 
 
-If you like this project, give it a star ⭐ here `GitHub Repo <https://github.com/quantgirluk/advent-calendar-2023>`_ and connect with me via:
+In December 2023, I decided to use the countdown to Christmas 🎄 to explore some `probability distributions <https://en.wikipedia.org/wiki/Probability_distribution>`_ using Python.
+So each day, we unwrapped a different distribution --exploring its shape, story, and where it appears in the real world.
 
-- 🦜 `Twitter <https://twitter.com/Quant_Girl>`_
+From the familiar Binomial distribution to the quirky surprises of the Poisson or Cauchy,
+these mathematical objects help us to make sense of randomness, uncertainty, and data. 
+
+Start your journey through the calendar by opening `Day 1 <day_01.html>`_, or explore the Galleries `Examples <auto_examples/index.html>`_ and `Bonus <auto_bonus/index.html>`_ 
+to see all the plots and code used in this project.
+
+If you like this project, give it a star ⭐ here `GitHub Repo <https://github.com/quantgirluk/advent-calendar-2023>`_ and
+
+
 - 👩🏽‍💼 `LinkedIn <https://www.linkedin.com/in/dialidsantiago/>`_
 - 📸 `Instagram <https://www.instagram.com/quant_girl/>`_
-- 👾 `Personal Website <https://quantgirl.blog>`_
-
-
-.. image:: bottom.png
-  :alt: Advent 2023
-  :align: center
-
+- 👾 `Personal Website <https://dialidsantiago.com>`_
+- 🦜 `Twitter <https://twitter.com/Quant_Girl>`_
 
 .. raw:: html
 
    <div style="text-align: center;">
-       Thanks for visiting ✨
+       Thanks for visiting and Happy Countdown ✨
    </div>
+
+.. image:: bottom.png
+  :alt: Advent 2023
+  :align: center
+  :scale: 50
 
 .. toctree::
    :maxdepth: 1
