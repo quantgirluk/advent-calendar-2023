@@ -18,7 +18,7 @@ import numpy as np
 
 plt.style.use("https://raw.githubusercontent.com/quantgirluk/matplotlib-stylesheets/main/quant-pastel-light.mplstyle")
 
-title: str = f"\n Chi Squared Distribution \n $X \\sim \chi^2 (k)$"
+title: str = f"\n Chi Squared Distribution \n" +r"$X \sim \chi^2 (k)$"
 
 fig = plt.figure(figsize=(10, 5), dpi=200)
 gs = GridSpec(1, 4, wspace=0.5)

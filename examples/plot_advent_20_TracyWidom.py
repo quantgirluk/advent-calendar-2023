@@ -13,7 +13,7 @@ Day 5 : Arc-Sine
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.gridspec import GridSpec
-# from skrmt.ensemble.spectral_law import TracyWidomDistribution
+from skrmt.ensemble.spectral_law import TracyWidomDistribution
 #
 # plt.style.use("https://raw.githubusercontent.com/quantgirluk/matplotlib-stylesheets/main/quant-pastel-light.mplstyle")
 #

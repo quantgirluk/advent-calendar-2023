@@ -19,7 +19,7 @@ plt.style.use(
     "https://raw.githubusercontent.com/quantgirluk/matplotlib-stylesheets/main/quant-pastel-light.mplstyle")
 
 
-title = f"Zeta Distribution \n $X \sim \\zeta(s)$"
+title = f"Zeta Distribution \n" + r"$X \sim \zeta(s)$"
 
 fig = plt.figure(figsize=(10, 5), dpi=150)
 gs = GridSpec(1, 4, wspace=0.5)

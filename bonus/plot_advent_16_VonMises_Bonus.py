@@ -16,7 +16,7 @@ from scipy.stats import vonmises
 
 plt.style.use("https://raw.githubusercontent.com/quantgirluk/matplotlib-stylesheets/main/quant-pastel-light.mplstyle")
 
-title: str = f"\n Von Mises Distribution \n $X \\sim VonMises(\\mu = \\frac{1}{2} \pi, \\kappa = 1)$"
+title: str = f"\n Von Mises Distribution \n" + r"$X \sim VonMises(\mu = \frac{1}{2} \pi, \kappa = 1)$"
 
 loc = 0.5 * np.pi  # circular mean
 kappa = 1  # concentration
