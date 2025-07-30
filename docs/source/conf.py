@@ -22,8 +22,9 @@ copyright = '2025, D. Santiago'
 author = 'D. Santiago'
 # copyright =  "2024"  # Copyright year to be placed in the footer
 
-# html_logo = 'advent.jpg'
-html_logo = 'logo.png'
+# html_logo = 'advent
+# .jpg'
+html_logo = 'logo.jpg'
 # The full version, including alpha/beta/rc tags
 release = '2023'
 
