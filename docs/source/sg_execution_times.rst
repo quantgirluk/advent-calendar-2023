@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:01.267** total execution time for 29 files **from all galleries**:
+**00:20.595** total execution time for 29 files **from all galleries**:
 
 .. container::
 
@@ -32,28 +32,31 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_plot_advent_20_TracyWidom.py` (``../../examples/plot_advent_20_TracyWidom.py``)
-     - 00:01.267
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_advent_22_MarchenkoPastur.py` (``../../examples/plot_advent_22_MarchenkoPastur.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_auto_bonus_plot_advent_15_Chi_Bonus.py` (``../../bonus/plot_advent_15_Chi_Bonus.py``)
-     - 00:00.000
+   * - :ref:`sphx_glr_auto_examples_plot_advent_23_TwoPieceNormal.py` (``../../examples/plot_advent_23_TwoPieceNormal.py``)
+     - 00:04.649
      - 0.0
    * - :ref:`sphx_glr_auto_bonus_plot_advent_16_VonMises_Bonus.py` (``../../bonus/plot_advent_16_VonMises_Bonus.py``)
-     - 00:00.000
+     - 00:04.381
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_plot_advent_19_Zeta.py` (``../../examples/plot_advent_19_Zeta.py``)
+     - 00:03.707
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_plot_advent_12_ChiSquared.py` (``../../examples/plot_advent_12_ChiSquared.py``)
+     - 00:03.212
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_plot_advent_01_Binomial.py` (``../../examples/plot_advent_01_Binomial.py``)
+     - 00:02.758
      - 0.0
    * - :ref:`sphx_glr_auto_bonus_plot_advent_19_Zeta_Bonus.py` (``../../bonus/plot_advent_19_Zeta_Bonus.py``)
+     - 00:01.889
+     - 0.0
+   * - :ref:`sphx_glr_auto_bonus_plot_advent_15_Chi_Bonus.py` (``../../bonus/plot_advent_15_Chi_Bonus.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_bonus_plot_advent_23_TwoPieceNorma_Bonus.py` (``../../bonus/plot_advent_23_TwoPieceNorma_Bonus.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_bonus_plot_advent_24_Normal_Bonus.py` (``../../bonus/plot_advent_24_Normal_Bonus.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_advent_01_Binomial.py` (``../../examples/plot_advent_01_Binomial.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_plot_advent_02_Beta.py` (``../../examples/plot_advent_02_Beta.py``)
@@ -86,9 +89,6 @@ Computation times
    * - :ref:`sphx_glr_auto_examples_plot_advent_11_F.py` (``../../examples/plot_advent_11_F.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_advent_12_ChiSquared.py` (``../../examples/plot_advent_12_ChiSquared.py``)
-     - 00:00.000
-     - 0.0
    * - :ref:`sphx_glr_auto_examples_plot_advent_13_Exponential.py` (``../../examples/plot_advent_13_Exponential.py``)
      - 00:00.000
      - 0.0
@@ -107,13 +107,13 @@ Computation times
    * - :ref:`sphx_glr_auto_examples_plot_advent_18_WignerSemicircle.py` (``../../examples/plot_advent_18_WignerSemicircle.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_advent_19_Zeta.py` (``../../examples/plot_advent_19_Zeta.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_advent_20_TracyWidom.py` (``../../examples/plot_advent_20_TracyWidom.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_plot_advent_21_InflatedBeta.py` (``../../examples/plot_advent_21_InflatedBeta.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_advent_23_TwoPieceNormal.py` (``../../examples/plot_advent_23_TwoPieceNormal.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_advent_22_MarchenkoPastur.py` (``../../examples/plot_advent_22_MarchenkoPastur.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_plot_advent_24_Normal.py` (``../../examples/plot_advent_24_Normal.py``)
