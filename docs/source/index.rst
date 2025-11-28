@@ -14,7 +14,7 @@ Calendar of Distributions
 In December 2023, I decided to use the countdown to Christmas 🎄 to explore some `probability distributions <https://en.wikipedia.org/wiki/Probability_distribution>`_ using Python.
 So each day, we unwrapped a different distribution --exploring its shapes, a bit of its story, and where it appears in the real world.
 
-From the familiar Brownian Motion distribution to the quirky surprises of the Poisson or Cauchy,
+From the familiar Gaussian distribution to the quirky surprises of the Poisson or Cauchy,
 these mathematical objects help us to make sense of randomness, uncertainty, and data. 
 
 Start your journey through the calendar by opening `Day 1 <day_01.html>`_, or explore the Galleries `Examples <auto_examples/index.html>`_ and `Bonus <auto_bonus/index.html>`_ 
